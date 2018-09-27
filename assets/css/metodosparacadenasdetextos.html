@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope de Javascript </title>
+
+</head>
+<body>
+
+    <script>
+        var texto ="juan carlos diaz";
+        // var nuevotexto = texto.length;
+        // var nuevotexto = texto.substring(4); //para cortar cadenas de textos 
+        // var nuevotexto = texto.substr(0,5); //para cortar cadenas de textos desde la posicion 0 hasta la 5 
+        var nuevotexto = texto.indexOf("o", 4); //para cortar cadenas de textos la posicion de la letra "o" a partir de la posicion 5 
+        var nuevotexto = texto.lastIndexOf("o", 4); //para cortar cadenas de textos desde la ultima letra y te devuelve la posicion
+        var nuevotexto = texto.replace ("juan", "GeopByte"); // remplaza el texto "juan" por GeopByte
+        var nuevotexto = texto.toUpperCase(); // combierte texto en mayuscula
+        var nuevotexto = texto.toLowerCase(); // combierte texto a minuscula
+
+        document.write(nuevotexto)
+        
+    </script>
+</body>
+</html>

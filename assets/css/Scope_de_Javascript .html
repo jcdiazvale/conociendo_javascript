@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope de Javascript </title>
+
+</head>
+<body>
+
+    <!-- <script src="../js/funciones_formularios.js"></script> -->
+    <script>
+
+        // Global - Podemos acceder a ella desde cualquier parte de código.      
+        // Local - Variables creadas dentro de una funcion, solo pueden ser accedidas desde su función u una funcion anidada.      
+
+
+
+
+        // (function(){aqui se coloca toda la funcion y queda protegida contra todo. }())
+        (function(){
+
+        var variableglobal = "esta es Global";
+        // alert(variableglobal);
+        
+        var mifuncion = function(){        
+            // var variablelocal = "esta es Local";
+            // alert(variablelocal);
+
+            var funcionlocal =function(){
+                var variablelocal = "Esta es una variable locasl dentro de una funcion que esta dentro de otra funcionlocal"
+                alert(variablelocal);
+            }
+            funcionlocal();    
+        }
+        mifuncion();
+        alert(variableglobal);
+        alert(variablelocal);
+
+        }())
+
+        
+    </script>
+</body>
+</html>
