@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>funciones y formularios</title>
+
+</head>
+<body>
+    <h1>Mi sitio web con javascript</h1>
+
+    <form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="Sumar" onclick="alert( suma (0,0) );">
+    </form>
+
+    <!-- <script src="../js/funciones_formularios.js"></script> -->
+    <script>
+        var suma = function(numero1, numero2){
+        var numero1 = parseInt(document.getElementById("numero1").Value);
+        var numero2 = parseInt(document.getElementById("numero2").Value);
+    
+        var resultado = numero1 + numero2;
+        return resultado;
+        }
+    </script>
+</body>
+</html>
