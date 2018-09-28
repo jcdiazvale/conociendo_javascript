@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id= "Titulo">Titulo de nuestro sitio web</h1>
+    <div id="Subtitulo"></div>
+    <p>1.- Lorem ipsum <b>dolor</b> sit amet consectetur adipisicing elit. Exercitationem eligendi fugiat ex rem, animi, mollitia reiciendis dolor voluptate obcaecati necessitatibus dignissimos error aut. Quo dolorum aut est obcaecati voluptatibus itaque.</p>
+
+    <p id="segundo">2.- Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum consequuntur tempore ducimus libero, eum praesentium exercitationem, aliquam unde cum facilis voluptates odio numquam iusto? Animi, autem doloribus! Vitae, mollitia.</p>
+
+    <p>3.- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum consequatur modi repellat vero animi sequi reprehenderit beatae asperiores blanditiis maiores et adipisci ipsa sit repellendus ratione, officiis at cumque dolor?</p>
+    <script>
+    var elementosp = document.getElementsByTagName("p");
+// Ve a la consola y escribes: elementosp y te mostrará el resultado de la variable en forma de arrego.
+// En la misma consola escribe elementosp[0] para que te muestra la informacion del arreglo que esta en la posicion 1
+// En la misma consola elementosp[0].innerHTML y te trae el parrafo completo que esta dentro de la "<p>" que esta en la posicion 0 del arreglo
+// En la misma consola elementosp[0].innerHTML="ou yeat!"; y te remplaza temporalmente el contenido del parrafo por el ou yeat.
+    var segundoparrafo = document.getElementById("segundo");
+
+    //Agragando Nodos a al DOM
+    // 1.-Crear el elemento
+    var elemento = document.createElement("h2");
+    // 2.-Crear un nodo de texto
+    var contenido=document.createTextNode("Este es nuestro titular");
+    // 3.-Anadir un nodo de texto al elemento
+    elemento.appendChild(contenido);
+    // 4.-Agregar atrubutos al elemento
+    elemento.setAttribute("align", "center");
+    // 5.-Agregar el elemento al documento    
+    document.getElementById("Subtitulo").appendChild(elemento);
+
+
+    </script>
+</body>
+</html>
