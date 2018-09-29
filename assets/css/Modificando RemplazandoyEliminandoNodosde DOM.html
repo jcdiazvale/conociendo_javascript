@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificando, Remplazando y Eliminando Nodos del DOM</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="primero">Lorem ipsum <b>dolor</b> sit amet.</li>
+        <li id="segundo">consectetur adipisicing elit.</li>
+    </ol>
+    <script>
+        // MODIFICAR elemento
+        // var primerelemento = document.getElementById("primero");
+        // primerelemento.innerHTML = "Nuevo Texto <i class=\"foo\">GeopByte</i>";
+
+
+
+        // REEMLAZAR elemento
+        // var elemento = document.createElement("li"),
+        //     contenido = document.createTextNode("Nuevo Texto");
+
+        // elemento.appendChild(contenido);
+
+        // var padre = document.getElementsByTagName("li")[0].parentNode,
+        //     referencia = document.getElementsByTagName("li")[0];
+
+        // padre.replaceChild(elemento, referencia);
+
+
+
+        // ELIMINAR nodos del DOM
+        var elemento = document.createElement("li"),
+            contenido = document.createTextNode("Nuevo Texto");
+
+        elemento.appendChild(contenido);
+        var padre = document.getElementsByTagName("li")[0].parentNode,
+            referencia = document.getElementsByTagName("li")[0];
+
+        padre.removeChild(referencia);
+    </script>
+</body>
+</html>
