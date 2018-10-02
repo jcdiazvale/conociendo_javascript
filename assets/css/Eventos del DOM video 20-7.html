@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos del DOM video 20</title>
+<!-- Para para avisar por la consola y hacer una pausa antes de enviarte en este caso a la pagina de falconmaster.com -->
+</head>
+<body>
+    <!-- <button id="boton">Boton</button> -->
+
+    <a id ="boton" href="http://www.falconmaster.com">FalconMasrter</a>
+    <input type="text" id="input">    
+        <script>
+            (function(){
+                var saludo=function(e){
+                    console.log("Oh Yea!");
+                    e.preventDefault();
+                 };
+            var boton = document.getElementById("boton");
+            boton.addEventListener("click", saludo);
+            
+            }())
+        </script>
+</body>
+</html>

@@ -8,24 +8,31 @@
     <style>
     .thumb{
     width: 200px;
-    transition: 300ms all ease;
+    transition: 300ms all ease; 
     }
     .grande {
         width: 400px;
     }
-
     </style>
 </head>
-
 <body>
     <form action="">
-        <input type="button" value="Cambio de tamaño" onclick="">
+        <input type="button" value="Cambio de tamaño" onclick="zoon();">
     </form>
-    <img id="thumb" class ="thumb" scr="http://lorempixel.com/400/400/" width= "400" alt=""> 
+    <img id="thumb" class ="thumb" src="C:\code\conociendo_javascript\assets\img\AngryBirds-400x400.jpg" width= "400" alt=""> 
     <script>
 var zoon = function(){
-    var thumb =document.getElementById("thumb");
-    alert("s");
+    var thumb = document.getElementById("thumb");
+    // alert("s"); ->muestra cuadro de alerta en la pantalla
+    // thumb.setAttribute("class", "thum grande");
+    // la siguiente tambien es otro manera de hacer lo mismo que la anteior
+    // thumb.className = "thumb grande";
+    if (thumb.className=="thumb"){
+        thumb.className="thumb grande";
+    } else { 
+        thumb.className="thumb";
+    }
+
 }
         </script>
 </body>

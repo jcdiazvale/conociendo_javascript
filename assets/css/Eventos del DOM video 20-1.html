@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos del DOM video 20-1</title>
+<!-- Programa para cuando hacemos un clic dentro del formulario, al hacer clic en otro lugar y nuevamente hcemos clic en el formlario incrementa el indicador focus en uno -->
+</head>
+<body>
+    <button id="boton">Boton</button>
+    <input type="text" id="input">
+        
+        <script>
+            (function(){
+                var saludo=function(){
+                    console.log("focus!")
+                 };
+
+
+            var input = document.getElementById("input");
+            input.addEventListener("focus", saludo);
+            
+            }())
+        </script>
+</body>
+</html>
