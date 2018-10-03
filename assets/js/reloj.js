@@ -30,21 +30,27 @@
         
         pYear.textContent = year;
 
-        if (horas >= 12) {
-            horas = horas - 12;
-            ampm = "PM";
-        } else {
-            ampm = "AM";
-        }
-       
-        if (horas == 0) {
-            horas == horas 12;
-        };
 
+
+         if (horas >= 12) {
+          horas = horas - 12;
+          ampm = "PM";
+         } else {
+          ampm = "AM";
+         }
+       
+          if (horas == 0) {
+              horas = 12;
+          }
         pHoras.textContent = horas;
-        pAMPM.textContent = ampm;
         pMinutos.textContent = minutos;
-        PSegundos.textContent = segundos;
+
+        if (minutos < 10 ) {minutos = "0" + minutos};
+        if (segundos < 10 ) {segundos = "0" + segundos};
+
+        pSegundos.textContent = segundos;
+        pAMPM.textContent = ampm;
+
 
 
 
@@ -52,4 +58,5 @@
 
     };
     actualizarHora();
+    var intervalo = setInterval(actualizarHora, 1000);
 }())
